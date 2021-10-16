@@ -4927,7 +4927,6 @@ static int fg_psy_get_property(struct power_supply *psy,
 		break;
 #endif
 	default:
-		pr_err("unsupported property %d\n", psp);
 		rc = -EINVAL;
 		break;
 	}
