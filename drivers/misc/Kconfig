@@ -890,6 +890,7 @@ config QPNP_MISC
 	  and the driver provides an API to check if this interrupt
 	  is available on the current PMIC chip.
 
+<<<<<<< HEAD
 config RAMDUMP_TAGS
 	bool "Ramdump tags to communicate between kernel and ramdump"
 	default n
@@ -928,6 +929,17 @@ config ONESEG_TUNER_SMTVJ19X
 	  1seg contents viewing.
 	  This module controls power switching and reset switching of
 	  SMT-VJ19x.
+=======
+config CXD224X_NFC
+	bool "CXD224X driver for FeliCa and NFC"
+	depends on I2C
+	default n
+	help
+	  This option enables device driver support for Sony CXD224X
+	  series. This driver enables the control of CXD224X series
+	  device by using I2C. Furthermore, this driver enables the
+	  control of PON using device file.
+>>>>>>> f179185b122d (misc: Import Sony Carillon Driver)
 
 source "drivers/misc/c2port/Kconfig"
 source "drivers/misc/eeprom/Kconfig"
@@ -943,6 +955,7 @@ source "drivers/misc/echo/Kconfig"
 source "drivers/misc/cxl/Kconfig"
 source "drivers/misc/fpr_FingerprintCard/Kconfig"
 source "drivers/misc/mm_tuner/Kconfig"
+source "drivers/misc/carillon/Kconfig"
 endmenu
 
 config OKL4_LINK_SHBUF
